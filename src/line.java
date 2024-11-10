@@ -5,13 +5,14 @@ import javax.swing.*;
 
 
 
+
 public class line extends JFrame{
 
-  public static int line1x1 = 250;
-MyTimerTask repeater = new MyTimerTask();
+  MyTimerTask timerTask = new MyTimerTask();
+int line1x1 = timerTask.line1x1;
 
     public line() {
-    
+   
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setSize(500,500);
     this.setLocationRelativeTo(null);
@@ -19,17 +20,21 @@ MyTimerTask repeater = new MyTimerTask();
    } 
 
     public void paint(Graphics g) {
-     Graphics2D g2D= (Graphics2D) g;
-       this.line1x1 =line1x1;
-      //repeater.
-       g2D.drawLine(line1x1,250,500,500);
+     Graphics2D g2D= (Graphics2D) g; 
+    
+     g2D.drawLine(line1x1,250,500,500);
        }
+
+      
          
     
             public static void main(String[] args){
-            
-              line line = new line();
+              MyTimerTask repeater = new MyTimerTask();
+              repeater.run();
+               line line = new line();
+
              
+                       
 
 
 }
