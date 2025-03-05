@@ -8,8 +8,7 @@ import javax.swing.*;
 
 public class line extends JFrame{
 
-  MyTimerTask timerTask = new MyTimerTask();
-int line1x1 = timerTask.line1x1;
+  static repeater repeater = new repeater();
 
     public line() {
    
@@ -21,25 +20,27 @@ int line1x1 = timerTask.line1x1;
 
     public void paint(Graphics g) {
      Graphics2D g2D= (Graphics2D) g; 
-    
-     g2D.drawLine(line1x1,250,500,500);
+     g2D.drawLine(repeater.line1x1,repeater.line1y1,repeater.line1x2,repeater.line1y2);
        }
 
+    public static void pause(long milliseconds) throws InterruptedException {
+        Thread.sleep(milliseconds);
+    }
+   
+    
+    public static void main(String[] args) throws InterruptedException {
       
-         
-    
-            public static void main(String[] args){
-              MyTimerTask repeater = new MyTimerTask();
-              repeater.run();
-               line line = new line();
-
-             
-                       
-
-
-}
+        line line = new line();
+      for (int i = 0; i < 10; i++) {
+        repeater.runLineOne();
+        line.repaint(); 
+        pause(1000);
       }
-    
+              
+}
+      
+}
+
      
   
     
