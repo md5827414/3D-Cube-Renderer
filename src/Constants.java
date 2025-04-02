@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Constants{
   //front square
@@ -19,16 +17,5 @@ public class Constants{
   int vertex7x = 375;
   int vertex7y = 325;
   int vertex8x = 375;
-  int vertex8y = 175;
-  
-
-
-
-    public Constants() {
-    
-        
-        }
-
-
-        
+  int vertex8y = 175;      
     }
