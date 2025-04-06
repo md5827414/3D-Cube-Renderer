@@ -2,7 +2,7 @@ public class Actions {
     static Constants Constants = new Constants();
 // 0 for right, 1 for left, 2 for up, 3 for down
 
-    public static void move() {
+    public static void moveRight() {
         
             Constants.vertex1x+=5;
             Constants.vertex2x+=5;
@@ -14,4 +14,5 @@ public class Actions {
             Constants.vertex8x-=5;
     
     }
+   
 }
